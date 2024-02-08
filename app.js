@@ -1,8 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose'); // Import mongoose
 require('dotenv').config(); // Import dotenv to manage environment variables
-
 const app = express();
+const Player = require('./models/Player');
 
 app.use(express.json()); // Middleware for parsing JSON
 
@@ -17,7 +17,7 @@ app.get('/hello', (req, res) => {
 });
 
 // Placeholder routes for player data - these will need to be fully implemented
-const Player = require('./models/Player');
+
 app.get('/api/v1/players', async (req, res) => {
     try {
       const players = await Player.find();
@@ -28,17 +28,16 @@ app.get('/api/v1/players', async (req, res) => {
   });
 
 app.get('/api/v1/players/:id', (req, res) => {
-  // Logic to get player by playerID
+ 
 });
 
-// Example of a route to get players by position, adjust as needed
+
 app.get('/api/v1/players/position/:position', (req, res) => {
-  // Logic to get players by position
+
 });
 
-// Adding a route for players by height, note the updated route
+
 app.get('/api/v1/players/height/:height', (req, res) => {
-  // Logic to get players by height
 });
 
 const port = process.env.PORT || 3000;
