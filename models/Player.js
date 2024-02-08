@@ -5,10 +5,13 @@ const playerSchema = new mongoose.Schema({
   position: { type: String, required: true },
   college: String,
   metrics: {
+    year: Number,
     height: Number,
     weight: Number,
     fortyYardDash: Number,
-    // Add other metrics as needed
+    draftPick: Number,
+
+  
   },
 });
 
