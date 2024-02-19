@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require ('express');
 const mongoose = require('mongoose'); // Import mongoose
 require('dotenv').config(); // Import dotenv to manage environment variables
 const app = express();
@@ -26,19 +26,6 @@ app.get('/api/v1/players', async (req, res) => {
       res.status(500).send(err.message);
     }
   });
-
-app.get('/api/v1/players/:id', (req, res) => {
- 
-});
-
-
-app.get('/api/v1/players/position/:position', (req, res) => {
-
-});
-
-
-app.get('/api/v1/players/height/:height', (req, res) => {
-});
 
 const port = process.env.PORT || 3000;
 
